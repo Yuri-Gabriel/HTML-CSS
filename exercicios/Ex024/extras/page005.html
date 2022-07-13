@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+</head>
+<body>
+    <a href="#">
+        click em mim
+    </a>
+    <div id="saida" >
+
+    </div>
+
+    <script>
+        document.querySelector('a').addEventListener('click', () => {
+            let s = document.querySelector("#saida");
+            s.innerHTML += "<p>Clicou</p>"
+        });
+    </script>
+</body>
+</html>
