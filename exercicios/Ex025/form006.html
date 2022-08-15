@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="cad.php" method="post">
+        <div>
+            <label for="cor">Cor: </label>
+            <input
+                type="color"
+                name="cor"
+                id="cor"
+                value="#ff00ff"
+            >
+        </div>
+        <div>
+            <label for="sas">Nivel de sastifação</label>
+            <input
+                type="range"
+                name="sas"
+                id="sas"
+                min="1"
+                max="100"
+                value="1"
+            >
+            <label id="sas">0</label>
+        </div>
+        <div>
+            <label for="foto">Foto: </label>
+            <input
+                type="file"
+                name="foto"
+                id="foto"
+            >
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+    <script>
+        document.querySelector("input#sas").addEventListener("change", () => {
+            document.querySelector("label#sas").innerHTML = document.querySelector("input#sas").value;
+        })
+    </script>
+</body>
+</html>
