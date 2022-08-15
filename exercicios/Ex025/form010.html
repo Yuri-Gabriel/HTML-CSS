@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="sads.php" method="post">
+        <fieldset>
+            <div>
+                <label for="ano">Em que ano você nasceu?</label>
+                <input type="number" name="ano" id="ano" max="2020" min="1900"
+                oninput="CalcIdade()">
+            </div>
+            <div>
+                <label for="age">Sua idade</label>
+                <output id="yourAge">0</output>
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+    <script>
+        function CalcIdade() {
+            const atual = new Date().getFullYear();
+            yourAge.innerHTML = Number(atual) - Number(ano.value);
+        }
+    </script>
+</body>
+</html>

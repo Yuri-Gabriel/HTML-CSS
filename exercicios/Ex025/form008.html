@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="sads.php" method="post">
+        <fieldset>
+            <div>
+                <label for="n1">Num1: </label>
+                <input type="number" name="n1" id="n1" required oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+            </div>
+            <div>
+                <label for="n2">Num2: </label>
+                <input type="number" name="n2" id="n2" required oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+            </div>
+            <div>
+                <label for="soma">Soma: </label>
+                <output name="soma" id="soma">0</output>
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
