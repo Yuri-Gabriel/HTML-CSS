@@ -1,2 +1,67 @@
 @charset "UTF-8";
 
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-color: #ffffff;
+        background-image: none;
+    }
+    main {
+        border: 2px solid #000000;
+    }
+    main::after {
+        content: "ashdahsdjahskdhaskdahsdakasndas";
+
+    } 
+    main h1 {
+        text-shadow: none;
+        color: #000000;
+    }
+    #phone { display: none; }
+    #tablet { display: none; }
+    #print { display: block; }
+    #pc { display: none; }
+    #tv { display: none; }
+}
+
+/* Tablets */
+@media screen and
+        (min-width: 768px) and
+        (max-width: 992px) {
+    body {
+        background-image: url("../img/back-tablet.jpg");
+    }
+    #phone { display: none; }
+    #tablet { display: block; }
+    #print { display: none; }
+    #pc { display: none; }
+    #tv { display: none; }
+}
+
+/* Desktop */
+@media screen and
+        (min-width: 992px) and
+        (max-width: 1200px) {
+    body {
+        background-image: url("../img/back-pc.jpg");
+    }
+    #phone { display: none; }
+    #tablet { display: none; }
+    #print { display: none; }
+    #pc { display: block; }
+    #tv { display: none; }
+}
+
+/* Grantes Telas */
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url("../img/back-tv.jpg");
+    }
+    #phone { display: none; }
+    #tablet { display: none; }
+    #print { display: none; }
+    #pc { display: none; }
+    #tv { display: block; }
+}
