@@ -79,7 +79,7 @@ menu #menu-bar::before {
 }
 
 menu ul {
-    display: none;
+    list-style: none;
 }
 
 menu ul li {

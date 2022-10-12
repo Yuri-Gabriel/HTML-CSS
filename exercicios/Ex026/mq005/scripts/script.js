@@ -1,9 +1,5 @@
 const MenuResize = () => {
-    if (isOpen()) {
-        GetElement("menu ul").style.display = "none";
-    } else {
-        GetElement("menu ul").style.display = "block";
-    }
+    GetElement("menu ul").style.display = isOpen()?"none":"block";
 }
 
 const GetElement = (selector) => {
@@ -11,9 +7,13 @@ const GetElement = (selector) => {
 }
 
 const isOpen = () => {
-    if (GetElement("menu ul").style.display === "none") {
-        return false;
-    } else {
-        return true;
-    }
+    return GetElement("menu ul").style.display === "block";
 }
+
+window.addEventListener("resize", () => {
+    if(window.innerWidth >= 768) {
+        document.querySelector("header menu ul").style.display = "block";
+    } else {
+        document.querySelector("header menu ul").style.display = "none";
+    }
+})
