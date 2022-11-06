@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+:root {
+    --Preto: #000000;
+    --Branco: #FFFFFF;
+    --Verde: #49A09D;
+    --Roxo: #5F2C82;
+}
+
+* {
+    transition: all 0.1s linear;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--Roxo);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+main section {
+    background-color: var(--Branco);
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section div#imagem {
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+    background-image: url('../imagens/img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+section div#imagem img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+}
+
+section div#formulario h1 {
+    margin: 0px;
+    text-align: center;
+}
+
+section div#formulario p {
+    font-size: 0.8em;
+    margin: 5px 7px;
+}
+
+section div#formulario form {
+    height: 190px;
+    padding: 10px;
+}
+
+form > * {
+    height: 40px;
+    display: block;
+    margin: 5px auto;
+}
+
+form div {
+    background-color: var(--Roxo);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form div i {
+    color: white;
+    font-size: 1.9em;
+    width: 30px;
+    margin: 5px 0px 5px 5px;
+    text-align: center;
+}
+
+
+form div input {
+    width: calc(100% - 45px);
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--Verde);
+    border: none;
+}
+
+form div input::placeholder {
+    color: var(--Branco);
+    font-weight: bold;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    border: 1px solid var(--Verde);
+    background-color: var(--Verde);
+    color: var(--Branco);
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form a {
+    border: 1px solid var(--Verde);
+    color: var(--Verde);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+form a i {
+    font-size: 0.8em;
+}
+
